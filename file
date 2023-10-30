@@ -17,7 +17,11 @@ ctx,
 keystate, 
 frames,   
 score;	  
- 
+canvas = document.createElement("canvas");
+canvas.width = COLS*20;
+canvas.height = ROWS*20;
+ctx = canvas.getContext("2d");
+document.body.appendChild(canvas);
 grid = {
  
 	width: null,  
@@ -96,13 +100,6 @@ function setFood() {
  
  
 function main() {
-	
-	canvas = document.createElement("canvas");
-	canvas.width = COLS*20;
-	canvas.height = ROWS*20;
-	ctx = canvas.getContext("2d");
-	
-	document.body.appendChild(canvas);
  
 	
 	ctx.font = "12px Helvetica";
